@@ -2,7 +2,7 @@
     "name": "GameInputs",
     "maps": [
         {
-            "name": "Character",
+            "name": "Gameplay",
             "id": "c1fa8a76-79bf-439a-9e72-6a901ee5ed5f",
             "actions": [
                 {
@@ -18,6 +18,42 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "867635aa-e847-490c-9188-d2c1545338f3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "0a73cc2e-de3b-46b2-8a99-c13bc4c245d3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Map",
+                    "type": "Button",
+                    "id": "11cd4990-275e-4772-bec1-6816c735ba49",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Sight",
+                    "type": "Value",
+                    "id": "dad01a63-842c-4c54-a624-4841d7da6408",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "WorldChange",
+                    "type": "Button",
+                    "id": "dbfdcd27-3884-4be2-a72c-f75f5f245905",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -110,6 +146,94 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ce8df754-55a3-4ebe-a39c-14dfd5150457",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0c42252-e38a-4fec-a43f-b466a522d40e",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "db167a70-8746-44e3-b8df-87eeb9c33182",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Map",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d01766cd-a7ed-4af7-b7f6-c7e169ce31fe",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Map",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d8ab5fed-5fef-4d35-a532-409d35b397fe",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f7de3e8-cee8-47a6-92cc-ce2fa06a9620",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "39641c99-a463-4dfd-aa03-6e6d3dceca86",
+                    "path": "<Gamepad>/rightStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WorldChange",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4ad86578-98bb-45c3-a876-a6f88f8fadbb",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WorldChange",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

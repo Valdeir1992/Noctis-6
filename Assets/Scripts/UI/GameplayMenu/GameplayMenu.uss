@@ -1,0 +1,12 @@
+.invisible {
+    transition-duration: 1s;
+    transition-property: all;
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+}

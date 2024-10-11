@@ -1,0 +1,13 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/UI/Map/UIMapMenu.uss?fileID=7433441132597879392&amp;guid=e9b657936728e224baeaa9273b1a56e9&amp;type=3#UIMapMenu" />
+    <engine:VisualElement name="Root">
+        <engine:VisualElement name="Top" style="flex-grow: 0; width: 100%; height: 7%; background-color: rgb(34, 31, 31); align-items: center;">
+            <engine:VisualElement name="Optins" style="flex-grow: 0; width: 60%; height: 100%; justify-content: center; align-items: center; flex-direction: row;">
+                <engine:Label text="Colecionáveis" name="Label" style="-unity-font-style: bold; color: rgb(255, 255, 255); font-size: 28px; margin-right: 40px;" />
+                <engine:Label text="Map" name="Label" style="-unity-font-style: bold; color: rgb(255, 255, 255); font-size: 28px; margin-right: 40px;" />
+                <engine:Label text="Inventário" style="-unity-font-style: bold; color: rgb(255, 255, 255); font-size: 28px;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="Container" style="flex-grow: 1;" />
+    </engine:VisualElement>
+</engine:UXML>

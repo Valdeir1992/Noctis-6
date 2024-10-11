@@ -24,7 +24,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
     ""name"": ""GameInputs"",
     ""maps"": [
         {
-            ""name"": ""Character"",
+            ""name"": ""Gameplay"",
             ""id"": ""c1fa8a76-79bf-439a-9e72-6a901ee5ed5f"",
             ""actions"": [
                 {
@@ -40,6 +40,42 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""867635aa-e847-490c-9188-d2c1545338f3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""0a73cc2e-de3b-46b2-8a99-c13bc4c245d3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Map"",
+                    ""type"": ""Button"",
+                    ""id"": ""11cd4990-275e-4772-bec1-6816c735ba49"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sight"",
+                    ""type"": ""Value"",
+                    ""id"": ""dad01a63-842c-4c54-a624-4841d7da6408"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""WorldChange"",
+                    ""type"": ""Button"",
+                    ""id"": ""dbfdcd27-3884-4be2-a72c-f75f5f245905"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -132,6 +168,94 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ce8df754-55a3-4ebe-a39c-14dfd5150457"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a0c42252-e38a-4fec-a43f-b466a522d40e"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""db167a70-8746-44e3-b8df-87eeb9c33182"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Map"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d01766cd-a7ed-4af7-b7f6-c7e169ce31fe"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Map"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d8ab5fed-5fef-4d35-a532-409d35b397fe"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5f7de3e8-cee8-47a6-92cc-ce2fa06a9620"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""39641c99-a463-4dfd-aa03-6e6d3dceca86"",
+                    ""path"": ""<Gamepad>/rightStickPress"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WorldChange"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4ad86578-98bb-45c3-a876-a6f88f8fadbb"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WorldChange"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -298,10 +422,14 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // Character
-        m_Character = asset.FindActionMap("Character", throwIfNotFound: true);
-        m_Character_Move = m_Character.FindAction("Move", throwIfNotFound: true);
-        m_Character_Jump = m_Character.FindAction("Jump", throwIfNotFound: true);
+        // Gameplay
+        m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
+        m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
+        m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
+        m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
+        m_Gameplay_Map = m_Gameplay.FindAction("Map", throwIfNotFound: true);
+        m_Gameplay_Sight = m_Gameplay.FindAction("Sight", throwIfNotFound: true);
+        m_Gameplay_WorldChange = m_Gameplay.FindAction("WorldChange", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Horizontal = m_UI.FindAction("Horizontal", throwIfNotFound: true);
@@ -310,7 +438,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
 
     ~@GameInputs()
     {
-        UnityEngine.Debug.Assert(!m_Character.enabled, "This will cause a leak and performance issues, GameInputs.Character.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Gameplay.enabled, "This will cause a leak and performance issues, GameInputs.Gameplay.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, GameInputs.UI.Disable() has not been called.");
     }
 
@@ -370,35 +498,55 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Character
-    private readonly InputActionMap m_Character;
-    private List<ICharacterActions> m_CharacterActionsCallbackInterfaces = new List<ICharacterActions>();
-    private readonly InputAction m_Character_Move;
-    private readonly InputAction m_Character_Jump;
-    public struct CharacterActions
+    // Gameplay
+    private readonly InputActionMap m_Gameplay;
+    private List<IGameplayActions> m_GameplayActionsCallbackInterfaces = new List<IGameplayActions>();
+    private readonly InputAction m_Gameplay_Move;
+    private readonly InputAction m_Gameplay_Jump;
+    private readonly InputAction m_Gameplay_Pause;
+    private readonly InputAction m_Gameplay_Map;
+    private readonly InputAction m_Gameplay_Sight;
+    private readonly InputAction m_Gameplay_WorldChange;
+    public struct GameplayActions
     {
         private @GameInputs m_Wrapper;
-        public CharacterActions(@GameInputs wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Character_Move;
-        public InputAction @Jump => m_Wrapper.m_Character_Jump;
-        public InputActionMap Get() { return m_Wrapper.m_Character; }
+        public GameplayActions(@GameInputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Gameplay_Move;
+        public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
+        public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
+        public InputAction @Map => m_Wrapper.m_Gameplay_Map;
+        public InputAction @Sight => m_Wrapper.m_Gameplay_Sight;
+        public InputAction @WorldChange => m_Wrapper.m_Gameplay_WorldChange;
+        public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(CharacterActions set) { return set.Get(); }
-        public void AddCallbacks(ICharacterActions instance)
+        public static implicit operator InputActionMap(GameplayActions set) { return set.Get(); }
+        public void AddCallbacks(IGameplayActions instance)
         {
-            if (instance == null || m_Wrapper.m_CharacterActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_CharacterActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_GameplayActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GameplayActionsCallbackInterfaces.Add(instance);
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
+            @Map.started += instance.OnMap;
+            @Map.performed += instance.OnMap;
+            @Map.canceled += instance.OnMap;
+            @Sight.started += instance.OnSight;
+            @Sight.performed += instance.OnSight;
+            @Sight.canceled += instance.OnSight;
+            @WorldChange.started += instance.OnWorldChange;
+            @WorldChange.performed += instance.OnWorldChange;
+            @WorldChange.canceled += instance.OnWorldChange;
         }
 
-        private void UnregisterCallbacks(ICharacterActions instance)
+        private void UnregisterCallbacks(IGameplayActions instance)
         {
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
@@ -406,23 +554,35 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
+            @Map.started -= instance.OnMap;
+            @Map.performed -= instance.OnMap;
+            @Map.canceled -= instance.OnMap;
+            @Sight.started -= instance.OnSight;
+            @Sight.performed -= instance.OnSight;
+            @Sight.canceled -= instance.OnSight;
+            @WorldChange.started -= instance.OnWorldChange;
+            @WorldChange.performed -= instance.OnWorldChange;
+            @WorldChange.canceled -= instance.OnWorldChange;
         }
 
-        public void RemoveCallbacks(ICharacterActions instance)
+        public void RemoveCallbacks(IGameplayActions instance)
         {
-            if (m_Wrapper.m_CharacterActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_GameplayActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(ICharacterActions instance)
+        public void SetCallbacks(IGameplayActions instance)
         {
-            foreach (var item in m_Wrapper.m_CharacterActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_GameplayActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_CharacterActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_GameplayActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public CharacterActions @Character => new CharacterActions(this);
+    public GameplayActions @Gameplay => new GameplayActions(this);
 
     // UI
     private readonly InputActionMap m_UI;
@@ -477,10 +637,14 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
-    public interface ICharacterActions
+    public interface IGameplayActions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnMap(InputAction.CallbackContext context);
+        void OnSight(InputAction.CallbackContext context);
+        void OnWorldChange(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
