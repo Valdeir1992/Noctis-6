@@ -122,10 +122,3 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 193614
-  packageName: Easy Character Movement 2
-  packageVersion: 1.4.1
-  assetPath: Assets/ECM2/Shared Assets/Models/UnityCharacter/Models/Textures/DefaultMale_Occlusion.tif
-  uploadId: 655033

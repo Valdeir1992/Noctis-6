@@ -1532,10 +1532,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 193614
-  packageName: Easy Character Movement 2
-  packageVersion: 1.4.1
-  assetPath: Assets/ECM2/Shared Assets/Models/UnityCharacter/Animations/HumanoidRun.fbx
-  uploadId: 655033

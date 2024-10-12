@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: Default Local Group
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
-  m_GUID: 304134bff616d3e469b521f0ee6b1d80
+  m_Data:
+    m_SerializedData: []
+  m_GUID: cc7d31e0f1d653441a1809ddba14dd3b
   m_SerializeEntries:
   - m_GUID: 478a5ebb877d3fc47aecd96be32a41e2
     m_Address: Map
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77ec6209ed7ba004f89151bf1b16c18f
+    m_Address: Assets/Prefabs/UI/FadeController.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -31,8 +38,8 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
-  m_Settings: {fileID: 11400000, guid: 0bc990633a3cd0e44890fbff37eab260, type: 2}
+  m_Settings: {fileID: 11400000, guid: d6ce0104cb9106441b9142e500c15346, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: ddde1ab1eebca98449f17febeb3eab2d, type: 2}
-    - {fileID: 11400000, guid: 2883f9262c5e1564a8d9b64c2cc8f6e8, type: 2}
+    - {fileID: 11400000, guid: d440ccf0b1d0ed8418bfc8a6534b8a04, type: 2}
+    - {fileID: 11400000, guid: 2dcc32c9fa753864bbda24713143e128, type: 2}

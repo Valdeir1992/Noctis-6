@@ -9,11 +9,3 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 193614
-  packageName: Easy Character Movement 2
-  packageVersion: 1.4.1
-  assetPath: Assets/ECM2/Walkthrough/4 - Extending a Character/4.3 - Custom Movement
-    Mode/Scripts/PlayerController.cs
-  uploadId: 655033
