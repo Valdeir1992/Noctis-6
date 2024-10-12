@@ -10,11 +10,14 @@ public class WorldChangeController : MonoBehaviour
     private float _elapsedTime = 0;
     private NoctisWorlds _currentChange = NoctisWorlds.COMMON;
     private CancellationTokenSource _worldChangeCancelToken;
+    private bool _transition;
     [SerializeField] private float _transitionTime;
     [SerializeField] private float _globalTransitionTime;
 
     public float GlobalTime { get => _globalTransitionTime; }
     public float TransitionTime { get => _transitionTime;}
+    public NoctisWorlds CurrentChange { get => _currentChange;}
+    public bool Transition { get => _transition;}
 
     private void Update()
     {
@@ -30,6 +33,12 @@ public class WorldChangeController : MonoBehaviour
         {
             _currentChange = NoctisWorlds.COMMON;
         }
+    }
+    private async UniTaskVoid TransitionTimeBehaviour()
+    {
+        _transition = true;
+        await UniTask.Delay(TimeSpan.FromSeconds(_transitionTime));
+        _transition = false;
     }
 
     public async UniTask Change()
@@ -48,6 +57,7 @@ public class WorldChangeController : MonoBehaviour
             }
             if (!_worldChangeCancelToken.IsCancellationRequested)
             {
+                TransitionTimeBehaviour().Forget();
                 OnChange?.Invoke(_currentChange);
             }
         }
@@ -68,6 +78,10 @@ public class WorldChangeController : MonoBehaviour
     public void ChangeTo(NoctisWorlds world)
     {
         _currentChange = world;
+    }
+    public void SetCurrentWorld(NoctisWorlds newWorld)
+    {
+        _currentChange = newWorld;
     }
     public void Cancel()
     {
