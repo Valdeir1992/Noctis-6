@@ -14,7 +14,10 @@ public class LightBehaviourController : MonoBehaviour
     private void Awake()
     {
         _light = GetComponent<Light>();
-        _currentLightChange = _lightChange[0];
+        if(_lightChange != null && _lightChange.Length > 0)
+        {
+            _currentLightChange = _lightChange[0];
+        }
     }
     private void OnEnable()
     {
