@@ -168,22 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ebe30e3386cd79468c6d69800ad65e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _changeLight:
-  - Color: {r: 0.9169811, g: 0.06747586, b: 0.06747586, a: 0}
-    Intensity: 1
-    World: 0
-    Global: 1
-    TransitionTime: 0
-  - Color: {r: 0, g: 0.9697914, b: 1, a: 0}
-    Intensity: 1.2
-    World: 1
-    Global: 1
-    TransitionTime: 0
-  - Color: {r: 1, g: 1, b: 1, a: 0}
-    Intensity: 1
-    World: 2
-    Global: 1
-    TransitionTime: 0
+  _lightChange: []
 --- !u!114 &54204129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,20 +956,20 @@ MonoBehaviour:
   _skyMaterial: {fileID: 2100000, guid: 17927061d4a706548be6f53702550982, type: 2}
   _skyChange:
   - World: 0
+    Global: 1
+    TransitionTime: 0
     Sky: {r: 0.97735846, g: 0.012908457, b: 0.012908457, a: 0}
     Ground: {r: 0.2981131, g: 0.0061872466, b: 0.0061872466, a: 0}
-    Time: 0
-    Global: 1
   - World: 1
+    Global: 1
+    TransitionTime: 0
     Sky: {r: 0.011764698, g: 0.6015584, b: 0.9764706, a: 0}
     Ground: {r: 1, g: 1, b: 1, a: 0}
-    Time: 0
-    Global: 1
   - World: 2
+    Global: 1
+    TransitionTime: 0
     Sky: {r: 0.78113204, g: 0.78113204, b: 0.78113204, a: 0}
     Ground: {r: 0.17735851, g: 0.17233893, b: 0.17233893, a: 0}
-    Time: 0
-    Global: 1
 --- !u!114 &618763322
 MonoBehaviour:
   m_ObjectHideFlags: 0
