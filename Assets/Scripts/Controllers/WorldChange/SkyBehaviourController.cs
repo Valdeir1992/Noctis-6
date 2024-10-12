@@ -7,17 +7,17 @@ using Zenject;
 public class SkyBehaviourController : MonoBehaviour
 {
     [SerializeField] private Material _skyMaterial;
-    [Inject] private WorldChangeController _worldChange;
+    [Inject] private WorldChangeController _worldChangeController;
     [SerializeField] private SkyChange[] _skyChange;
 
     private void OnEnable()
     {
-        _worldChange.OnChange += Change;
+        _worldChangeController.OnChange += Change;
     }
 
     private void OnDisable()
     {
-        _worldChange.OnChange -= Change;
+        _worldChangeController.OnChange -= Change;
     }
 
     private async void Change(NoctisWorlds current)
@@ -27,7 +27,7 @@ public class SkyBehaviourController : MonoBehaviour
     }
     private async UniTask SkyWorldChange(SkyChange change)
     {
-        var time =(change.Global)? _worldChange.GlobalTime:change.Time;
+        var time =(change.Global)? _worldChangeController.GlobalTime:change.TransitionTime;
         var sky = _skyMaterial.GetColor("_SkyTint");
         var ground = _skyMaterial.GetColor("_GroundColor");
         for(float elapsedTime = 0;elapsedTime <1.1f;elapsedTime += Time.deltaTime/time)
@@ -39,11 +39,8 @@ public class SkyBehaviourController : MonoBehaviour
     }
 }
 [System.Serializable]
-public class SkyChange
-{
-    public NoctisWorlds World;
+public class SkyChange: Change
+{ 
     public Color Sky;
-    public Color Ground;
-    public float Time;
-    public bool Global;
+    public Color Ground; 
 }

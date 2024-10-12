@@ -9,12 +9,12 @@ public class LightBehaviourController : MonoBehaviour
     private Light _light;
     private LightChange _currentLightChange;
     [Inject] private WorldChangeController _worldChangeController;
-    [SerializeField] private LightChange[] _changeLight;
+    [SerializeField] private LightChange[] _lightChange;
 
     private void Awake()
     {
         _light = GetComponent<Light>();
-        _currentLightChange = _changeLight[0];
+        _currentLightChange = _lightChange[0];
     }
     private void OnEnable()
     {
@@ -27,7 +27,7 @@ public class LightBehaviourController : MonoBehaviour
 
     private async void Change(NoctisWorlds world)
     {
-        var change = _changeLight.First(x => x.World == world);
+        var change = _lightChange.First(x => x.World == world);
         await UniTask.WhenAll(ChangeColor(_currentLightChange, change), ChangeIntensity(_currentLightChange, change));
         _currentLightChange = change;
     }
@@ -51,10 +51,13 @@ public class LightBehaviourController : MonoBehaviour
     }
 }
 [System.Serializable]
-public class LightChange
+public class LightChange: Change
 {
     public Color Color;
-    public float Intensity;
+    public float Intensity; 
+}
+public class Change
+{
     public NoctisWorlds World;
     public bool Global;
     public float TransitionTime;

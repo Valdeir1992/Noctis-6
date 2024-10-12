@@ -1145,10 +1145,3 @@ ModelImporter:
   additionalBone: 0
   userData: 
   assetBundleName: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 193614
-  packageName: Easy Character Movement 2
-  packageVersion: 1.4.1
-  assetPath: Assets/ECM2/Shared Assets/Models/UnityCharacter/Animations/HumanoidCrouch.fbx
-  uploadId: 655033
