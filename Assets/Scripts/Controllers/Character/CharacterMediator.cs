@@ -1,4 +1,5 @@
 using ECM2;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
@@ -10,12 +11,16 @@ public class CharacterMediator : MonoBehaviour
     private Character _moviment;
     private bool _canMove = true;
     private bool _canRun = true;
+    private CharacterCameraController _cameraController;
     [Inject] private GameplayController _gameplayController;
     [SerializeField] private CharacterSO _data;
+    [SerializeField] private Transform _target;
 
     private void Awake()
     {
         _moviment = GetComponent<Character>();
+        _cameraController = GetComponent<CharacterCameraController>();
+        _cameraController.Setup(_target);
         SetupInputs();
         SetupCharacterData();
     }
@@ -55,6 +60,12 @@ public class CharacterMediator : MonoBehaviour
         }
         _moviment.SetMovementDirection(movementDirection);
     }
+
+    public void ToggleMove(bool v)
+    {
+        _canMove = v;
+    }
+
     private void SetupCharacterData()
     {
         _moviment.maxWalkSpeed = _data.WalkSpeed;
@@ -72,5 +83,10 @@ public class CharacterMediator : MonoBehaviour
     private void Move(InputAction.CallbackContext ctx)
     {
         _currentDirectionInput = ctx.ReadValue<Vector2>();
+    }
+
+    public class Factory : PlaceholderFactory<CharacterMediator>
+    {
+
     }
 }
