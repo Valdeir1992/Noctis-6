@@ -80,6 +80,15 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""e7ff6af5-5959-4f4f-8fca-d43f10cc1082"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -258,6 +267,28 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
                     ""action"": ""WorldChange"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fcf02282-7971-4781-bd9f-d0ae56e238e4"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""04ccf431-0995-4c44-9696-c457230ba4bd"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -430,6 +461,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         m_Gameplay_Map = m_Gameplay.FindAction("Map", throwIfNotFound: true);
         m_Gameplay_Sight = m_Gameplay.FindAction("Sight", throwIfNotFound: true);
         m_Gameplay_WorldChange = m_Gameplay.FindAction("WorldChange", throwIfNotFound: true);
+        m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Horizontal = m_UI.FindAction("Horizontal", throwIfNotFound: true);
@@ -507,6 +539,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Map;
     private readonly InputAction m_Gameplay_Sight;
     private readonly InputAction m_Gameplay_WorldChange;
+    private readonly InputAction m_Gameplay_Interact;
     public struct GameplayActions
     {
         private @GameInputs m_Wrapper;
@@ -517,6 +550,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         public InputAction @Map => m_Wrapper.m_Gameplay_Map;
         public InputAction @Sight => m_Wrapper.m_Gameplay_Sight;
         public InputAction @WorldChange => m_Wrapper.m_Gameplay_WorldChange;
+        public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -544,6 +578,9 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
             @WorldChange.started += instance.OnWorldChange;
             @WorldChange.performed += instance.OnWorldChange;
             @WorldChange.canceled += instance.OnWorldChange;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -566,6 +603,9 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
             @WorldChange.started -= instance.OnWorldChange;
             @WorldChange.performed -= instance.OnWorldChange;
             @WorldChange.canceled -= instance.OnWorldChange;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -645,6 +685,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         void OnMap(InputAction.CallbackContext context);
         void OnSight(InputAction.CallbackContext context);
         void OnWorldChange(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -26,10 +26,9 @@ public class Collectible
 } 
 public enum CollectibleType
 {
-    BOOK,
-    HERB,
-    GEM,
-    FRUIT,
+    DOCUMENT,
+    PLANT,
+    ORE, 
     CHARM,
     LIQUID
 }

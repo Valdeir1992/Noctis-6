@@ -10,14 +10,19 @@ public class GameplayController : MonoBehaviour
 {
     public Action OnPause;
     public Action OnResume;
+    public Action OnInteract;
     private bool _isPaused;
     private bool _mapVisible;
     private bool _canWorldChange = true;
+    private bool _canInteract = true;
+    private Action _currentAction;
     private GameInputs _inputs;
     private GameplayMenuController _gameplayMenu;
     private CancellationTokenSource _menuCancelToken;
     private CancellationTokenSource _mapCancelToken;
     private CancellationTokenSource _aliveCancelToken;
+    [Inject] private ScreenWarningController _screenWarning;
+    [Inject] private PlayerSpawnController _playerSpawn;
     [Inject] private WorldChangeController _worldChange;
     [Inject] private IFadeController _fadeController;
     [Inject(Id = "GameplayMenu")] private AssetReference _gameplayMenuRef;
@@ -28,6 +33,39 @@ public class GameplayController : MonoBehaviour
         _aliveCancelToken = new CancellationTokenSource();
     }
 
+    internal async UniTaskVoid CoolDownAction(float delay)
+    {
+        _canInteract = false;
+        await UniTask.Delay(TimeSpan.FromSeconds(delay),cancellationToken:_aliveCancelToken.Token);
+        _canInteract = true;
+    }
+    public async void ReadDocument(ItemSO item,DocumentType type)
+    {
+        _playerSpawn.Player.ToggleMove(false);
+        _canInteract = false;
+        await _screenWarning.ReadDocument(item,type);
+        _canInteract = true;
+        _playerSpawn.Player.ToggleMove(true);
+    }
+    internal void SetAction(Action action)
+    {
+        _currentAction = action;
+    }
+    public void CleanAction()
+    {
+        _currentAction = null; ;
+    }
+
+    internal void ShowActions(IEnviromentInteraction enviromentInteraction)
+    {
+        _screenWarning.ShowActions(enviromentInteraction);
+    }
+
+    internal void HiddenActions()
+    {
+        _screenWarning.HiddenActions();
+    }
+
     private void SetupInputs()
     {
         _inputs = new GameInputs();
@@ -35,6 +73,10 @@ public class GameplayController : MonoBehaviour
         _inputs.Gameplay.Map.started += Map;
         _inputs.Gameplay.WorldChange.started += WorldChange;
         _inputs.Gameplay.WorldChange.canceled += WorldChangeCancel;
+        _inputs.Gameplay.Interact.started += ctx =>
+        {
+            _currentAction?.Invoke();  
+        };
         _inputs.Gameplay.Enable();
     }
 
@@ -177,4 +219,10 @@ public class GameplayController : MonoBehaviour
             await HiddenMenu();
         }
     }
+}
+
+public enum DocumentType
+{
+    LETTER,
+    BOOK,
 }

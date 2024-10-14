@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Root" style="flex-grow: 0; width: 100%; height: 100%; flex-direction: row; justify-content: center; align-items: center;">
+        <ui:VisualElement name="Left" style="flex-grow: 0; width: 30%; height: 100%;" />
+        <ui:VisualElement name="Center" style="flex-grow: 0; width: 40%; height: 100%; align-items: center; flex-direction: column-reverse; padding-bottom: 33px;" />
+        <ui:VisualElement name="Right" style="flex-grow: 0; flex-direction: column-reverse; -unity-font-style: bold; color: rgb(255, 255, 255); align-items: flex-end; width: 30%; height: 100%; padding-bottom: 95px;" />
+        <ui:VisualElement name="Document" style="flex-grow: 0; color: rgb(0, 0, 0); overflow: visible; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.86); justify-content: center; align-self: center; align-items: center; display: none;">
+            <ui:VisualElement name="Background" style="flex-grow: 0; background-color: rgb(240, 237, 200); width: 24%; height: 55%; align-items: center; justify-content: center;">
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 92%; height: 91%;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Precione E para sair" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="color: rgb(255, 255, 255); font-size: 16px; -unity-font-style: bold; margin-top: 30px; -unity-text-align: upper-right; margin-left: 276px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Target" style="flex-grow: 0; position: absolute; width: 50px; height: 50px; left: 48.5%; top: 48.5%; right: 0; bottom: 0; align-self: auto; display: none;" />
+    </ui:VisualElement>
+</ui:UXML>

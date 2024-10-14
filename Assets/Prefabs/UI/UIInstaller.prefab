@@ -47,6 +47,6 @@ MonoBehaviour:
   _gameplayMenuRef:
     m_AssetGUID: fbd4e37b37d33e44786a66da0a5856a9
     m_SubObjectName: 
-    m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  _screenWarningPrefab: {fileID: 5767772499400889174, guid: 442cc1a6dfc703f41ba26a8f7d7a3e49, type: 3}

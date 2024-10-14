@@ -17,8 +17,43 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: cc7d31e0f1d653441a1809ddba14dd3b
   m_SerializeEntries:
+  - m_GUID: 08cce97e0fb3abe4cb49efe51ae3be79
+    m_Address: LETTER
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b20ee38bfa6f994aa6734ab29e37f3b
+    m_Address: ORE
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e6f9f6c4eb8f0141bc28e776badc776
+    m_Address: Assets/Props/2d/Stone.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38bbaf46d3485da4bb0e2e91a3614ca5
+    m_Address: CHEST_ICON
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3bd8c6966c5b1dd4c8ab382bacae7a31
+    m_Address: Assets/Prefabs/PlayerSpawnController.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4684ba615de73794a9a8707689b8b1e7
+    m_Address: Magnifying
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 478a5ebb877d3fc47aecd96be32a41e2
     m_Address: Map
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51f2cfeb2f4975248a313c8f4aa0f30d
+    m_Address: puzzle_icon
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -34,6 +69,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a067043b4e481604490721fab85da105
     m_Address: Assets/Props/Cube.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b474139db25e41245be1478116e3e6ce
+    m_Address: DOCUMENT
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7aef768deec97a4997f6c83e379725c
+    m_Address: PLANT
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
