@@ -22,13 +22,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09c7b18e8b375cc4a9cc08fb3e0b64d7
+    m_Address: Mushroom
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1b20ee38bfa6f994aa6734ab29e37f3b
     m_Address: ORE
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2e6f9f6c4eb8f0141bc28e776badc776
-    m_Address: Assets/Props/2d/Stone.png
+    m_Address: Stone
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -62,6 +67,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c359d8314295614bb927040ed6600c6
+    m_Address: Assets/SO/UIItem/FireStoneUI.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9b1543508cf33eb4dbbc77b30b7fe51c
     m_Address: Assets/Props/Sphere.fbx
     m_ReadOnly: 0
@@ -72,8 +82,33 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0f250486cc9c0943b483076d8a63108
+    m_Address: Plant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b474139db25e41245be1478116e3e6ce
     m_Address: DOCUMENT
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b536a179904715a46ad50b4cca12455f
+    m_Address: SlotShop
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd9d71a284b45f344bb926ef4c46eb99
+    m_Address: Assets/SO/UIItem/WindStoneUI.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: beb89e3d4fea5594998a3fa0ee3a6766
+    m_Address: Assets/SO/UIItem/WaterStoneUI.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2931088a1aa77b4b91a722ded381e82
+    m_Address: Assets/SO/UIItem/New UI Item Data SO.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

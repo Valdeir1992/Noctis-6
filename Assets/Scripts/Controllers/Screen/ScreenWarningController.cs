@@ -33,7 +33,8 @@ public class ScreenWarningController : MonoBehaviour
     }
     public async UniTask CollectedItem(ItemSO item, int amount)
     {
-        var icon = await Addressables.LoadAssetAsync<Sprite>(item.Icon);
+        var ui = await Addressables.LoadAssetAsync<UIItemDataSO>(item.UIRef);
+        var icon = await Addressables.LoadAssetAsync<Sprite>(ui.Icon);
         _screenWarningUIController.CollectedItem(icon, item.name, amount);
     }
 
@@ -54,6 +55,6 @@ public class ScreenWarningController : MonoBehaviour
 
     public async UniTask ReadDocument(ItemSO item, DocumentType type)
     {
-        await _screenWarningUIController.ShowText(item.Name, item.Description, type);
+        await _screenWarningUIController.ShowText(item.Name,"Empty", type);
     }
 }

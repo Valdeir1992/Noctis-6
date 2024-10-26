@@ -63,7 +63,7 @@ public class CharacterMediator : MonoBehaviour
 
     public void ToggleMove(bool v)
     {
-        _canMove = v;
+        _canMove = v; 
     }
 
     private void SetupCharacterData()
