@@ -24,6 +24,7 @@ public class GameplayController : MonoBehaviour
     private CancellationTokenSource _mapCancelToken;
     private CancellationTokenSource _aliveCancelToken;
     private CharacterInventoryController _inventory;
+    [Inject] private SkillController _skillController;
     [Inject] private ScreenWarningController _screenWarning;
     [Inject] private PlayerSpawnController _playerSpawn;
     [Inject] private WorldChangeController _worldChange;
@@ -39,6 +40,11 @@ public class GameplayController : MonoBehaviour
         _inventory = new CharacterInventoryController();
         _inventory.StartInventory();
         _aliveCancelToken = new CancellationTokenSource();
+
+        foreach(var skill in _skillController.ListSkill)
+        {
+            Debug.Log($"Nome da skill: {skill.Item1} Status:{((skill.Item2)?"<color=green> Habilitado </color>": "<color=red> Desabilitado </color>")}");
+        }
     }
     public bool CanBuy(int value)
     {
