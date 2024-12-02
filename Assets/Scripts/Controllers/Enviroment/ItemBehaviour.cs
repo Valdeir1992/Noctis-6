@@ -14,27 +14,16 @@ public class ItemBehaviour : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var action = GetComponent<IEnviromentInteraction>();
-        _gameplayController.ShowActions(action);
-        _gameplayController.SetAction(
-            () => 
-            {
-                action.Execute(this,_amount);
-                _gameplayController.HiddenActions();
-                if (!action.Repeat)
-                {
-                    Destroy(gameObject);
-                    _gameplayController.CleanAction();
-                }
-                else
-                {
-                    _gameplayController.CoolDownAction(action.Delay);
-                }
-            });
+        _gameplayController.ShowActions(action, () =>
+        {
+            action.Execute(this, _amount); 
+        }, end:()=> {
+            Destroy(gameObject);
+        }); 
     }
     private void OnTriggerExit(Collider other)
     {
-        _gameplayController.HiddenActions();
-        _gameplayController.CleanAction();
+        _gameplayController.HiddenActions(); 
     }
 }
 public enum VisibilityType
@@ -46,7 +35,6 @@ public enum VisibilityType
 public interface IEnviromentInteraction
 {
     public string ActionName { get; }  
-    public float Delay { get; }
-    public bool Repeat { get; }
+    public float Delay { get; } 
     public UniTask Execute(params object[] items);
 }

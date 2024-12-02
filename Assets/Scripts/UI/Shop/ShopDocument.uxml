@@ -1,0 +1,34 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Root" style="flex-grow: 0; width: 100%; height: 100%; opacity: 1; display: none;">
+        <ui:VisualElement name="Top" style="flex-grow: 0; height: 5%; width: 100%; align-items: center; flex-direction: row; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 27px; justify-content: center; margin-top: 22px;">
+            <ui:VisualElement name="ButtonLeft" style="flex-grow: 0; height: 100%; width: 5%; margin-right: 25px; background-image: url(&quot;project://database/Assets/Props/png/z_light.png?fileID=2800000&amp;guid=4a0d5135f5d771345aec75fc3ed588d2&amp;type=3#z_light&quot;); -unity-background-scale-mode: scale-to-fit;" />
+            <ui:Label tabindex="-1" text="Comprar" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Buy" style="margin-right: 30px; -unity-text-align: middle-center;" />
+            <ui:Label tabindex="-1" text="Vender" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Sell" style="margin-left: 30px; -unity-text-align: middle-center;" />
+            <ui:VisualElement name="ButtonRight" style="flex-grow: 0; height: 100%; width: 5%; margin-right: 0; margin-left: 25px; background-image: url(&quot;project://database/Assets/Props/png/x_key_light.png?fileID=2800000&amp;guid=8a5062596e3780243b7d36f12996559d&amp;type=3#x_key_light&quot;); -unity-background-scale-mode: scale-to-fit;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Mid" style="flex-grow: 0; width: 100%; height: 100%; flex-direction: row;">
+            <ui:VisualElement name="VisualElement" style="flex-grow: 0; width: 35%; height: 100%;" />
+            <ui:VisualElement name="GridBuy" style="flex-grow: 0; width: 32%; height: 90%; align-self: center; flex-direction: row; justify-content: flex-start; flex-wrap: wrap; margin-top: 50px; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; background-color: rgba(0, 0, 0, 0.75); padding-right: 0; padding-left: 25px; padding-top: 10px; display: none;" />
+            <ui:VisualElement name="GridSell" style="flex-grow: 0; width: 32%; height: 90%; align-self: center; flex-direction: row; justify-content: space-around; flex-wrap: wrap; margin-top: 50px; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; background-color: rgba(0, 0, 0, 0.75); padding-right: 10px; padding-left: 10px; display: none;" />
+            <ui:VisualElement name="Card" style="flex-grow: 0; width: 30%; height: 90%; align-items: center; color: rgb(255, 255, 255); display: none; background-color: rgba(0, 0, 0, 0.75); border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; margin-top: 75px; margin-left: 10px; opacity: 1; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(255, 255, 255);">
+                <ui:VisualElement name="Icon" style="flex-grow: 0; width: 68%; height: 40%; margin-top: 62px; -unity-background-scale-mode: stretch-to-fill;" />
+                <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Name" style="width: 90%; font-size: 29px;" />
+                <ui:VisualElement name="Container" style="flex-grow: 0; width: 90%; height: auto; text-overflow: clip; font-size: 20px; -unity-font-style: bold; white-space: normal; flex-wrap: wrap; -unity-text-outline-width: 0; -unity-text-align: middle-left;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Botton" style="flex-grow: 0; width: 100%; height: 6%; background-color: rgba(0, 0, 0, 0.4); flex-direction: row-reverse; align-items: center; color: rgb(255, 255, 255); -unity-font-style: bold; -unity-text-align: middle-center; font-size: 31px;">
+            <ui:VisualElement name="ButtonExit" style="flex-grow: 0; height: 90%; width: auto; flex-direction: row; padding-right: 28px;">
+                <ui:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Props/png/escape_light.png?fileID=2800000&amp;guid=6e6960909b689d34d88271b0f639b32b&amp;type=3#escape_light&quot;); height: 100%; width: 51px;" />
+                <ui:Label tabindex="-1" text="Fechar" parse-escape-sequences="true" display-tooltip-when-elided="true" style="border-left-width: 15px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="ButtonComprar" style="flex-grow: 0; height: 90%; width: auto; flex-direction: row; padding-right: 28px;">
+                <ui:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Props/png/e_light.png?fileID=2800000&amp;guid=c39435e2b624a864a8b8f139166ab9d3&amp;type=3#e_light&quot;); height: 100%; width: 51px;" />
+                <ui:Label tabindex="-1" text="Comprar" parse-escape-sequences="true" display-tooltip-when-elided="true" style="border-left-width: 15px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Money" style="flex-grow: 0; width: 13%; height: 100%; flex-direction: row;">
+                <ui:VisualElement style="flex-grow: 0; height: 100%; width: 26%; background-color: rgb(255, 255, 255); margin-right: 22px;" />
+                <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" style="justify-content: center; align-items: center;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

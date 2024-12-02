@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce197cfab549f2649ba400c2648bb40b, type: 3}
+  m_Name: WindStone
+  m_EditorClassIdentifier: 
+  _name: Pedra
+  _icon:
+    m_AssetGUID: 2e6f9f6c4eb8f0141bc28e776badc776
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  _uiRef:
+    m_AssetGUID: c2931088a1aa77b4b91a722ded381e82
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

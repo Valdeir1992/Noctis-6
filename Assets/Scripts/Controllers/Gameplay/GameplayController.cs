@@ -11,33 +11,56 @@ public class GameplayController : MonoBehaviour
     public Action OnPause;
     public Action OnResume;
     public Action OnInteract;
-    private bool _isPaused;
+    private int _money = 10000;
+    private bool _isPaused; 
     private bool _mapVisible;
     private bool _canWorldChange = true;
     private bool _canInteract = true;
-    private Action _currentAction;
+    private Action _startAction;
+    private Action _endAction;
     private GameInputs _inputs;
     private GameplayMenuController _gameplayMenu;
     private CancellationTokenSource _menuCancelToken;
     private CancellationTokenSource _mapCancelToken;
     private CancellationTokenSource _aliveCancelToken;
+    private CharacterInventoryController _inventory;
+    [Inject] private SkillController _skillController;
     [Inject] private ScreenWarningController _screenWarning;
     [Inject] private PlayerSpawnController _playerSpawn;
     [Inject] private WorldChangeController _worldChange;
     [Inject] private IFadeController _fadeController;
     [Inject(Id = "GameplayMenu")] private AssetReference _gameplayMenuRef;
 
+    public int Money { get => _money; }
+    public CharacterInventoryController Inventory { get => _inventory;}
+
     private void Start()
     {
         SetupInputs();
+        _inventory = new CharacterInventoryController();
+        _inventory.StartInventory();
         _aliveCancelToken = new CancellationTokenSource();
-    }
 
-    internal async UniTaskVoid CoolDownAction(float delay)
+        foreach(var skill in _skillController.ListSkill)
+        {
+            Debug.Log($"Nome da skill: {skill.Item1} Status:{((skill.Item2)?"<color=green> Habilitado </color>": "<color=red> Desabilitado </color>")}");
+        }
+    }
+    public bool CanBuy(int value)
     {
-        _canInteract = false;
-        await UniTask.Delay(TimeSpan.FromSeconds(delay),cancellationToken:_aliveCancelToken.Token);
-        _canInteract = true;
+        return _money > value;
+    }
+    public void ConsumeMoney(int value)
+    {
+        _money -= value;
+    } 
+    public void CollectItem(UIItemDataSO data, int amount)
+    {
+        _inventory.AddItem(new ItemInventory() { Item = data, Amount = amount });
+    }
+    public void UseItem(UIItemDataSO data, int amount)
+    {
+        _inventory.RemoveItem(new ItemInventory() { Item = data, Amount = amount });
     }
     public async void ReadDocument(ItemSO item,DocumentType type)
     {
@@ -46,24 +69,38 @@ public class GameplayController : MonoBehaviour
         await _screenWarning.ReadDocument(item,type);
         _canInteract = true;
         _playerSpawn.Player.ToggleMove(true);
-    }
-    internal void SetAction(Action action)
-    {
-        _currentAction = action;
-    }
+    } 
     public void CleanAction()
-    {
-        _currentAction = null; ;
+    { 
+        _endAction?.Invoke();
     }
-
-    internal void ShowActions(IEnviromentInteraction enviromentInteraction)
+    public void ToggleInputs(bool active)
+    {
+        if (active)
+        {
+            _inputs.Gameplay.Enable();
+        }
+        else
+        {
+            _inputs.Gameplay.Disable();
+        }
+    } 
+    internal void ShowActions(IEnviromentInteraction enviromentInteraction, Action start = null, Action end = null)
     {
         _screenWarning.ShowActions(enviromentInteraction);
+        _startAction = () =>
+        {
+            start.Invoke();
+            _startAction = null;
+            HiddenActions();
+        };
+        _endAction = end;
     }
 
-    internal void HiddenActions()
+    public void HiddenActions()
     {
         _screenWarning.HiddenActions();
+        CleanAction();
     }
 
     private void SetupInputs()
@@ -75,7 +112,7 @@ public class GameplayController : MonoBehaviour
         _inputs.Gameplay.WorldChange.canceled += WorldChangeCancel;
         _inputs.Gameplay.Interact.started += ctx =>
         {
-            _currentAction?.Invoke();  
+            _startAction?.Invoke();  
         };
         _inputs.Gameplay.Enable();
     }
@@ -111,6 +148,7 @@ public class GameplayController : MonoBehaviour
             {
                 _mapCancelToken.Cancel();
             }
+            _inputs.Gameplay.Disable();
             _mapCancelToken = new CancellationTokenSource();
             await _fadeController.FadeOut();
             var load = Addressables.LoadSceneAsync("Map", UnityEngine.SceneManagement.LoadSceneMode.Additive);
@@ -135,6 +173,7 @@ public class GameplayController : MonoBehaviour
             {
                 _mapCancelToken.Cancel();
             }
+            _inputs.Gameplay.Enable();
             _mapCancelToken = new CancellationTokenSource(); 
             _mapCancelToken = new CancellationTokenSource();
             await _fadeController.FadeOut();

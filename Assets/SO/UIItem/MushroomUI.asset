@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865e14cc1dc5433498a905fbdfaa9705, type: 3}
+  m_Name: MushroomUI
+  m_EditorClassIdentifier: 
+  _name: Cogumelo
+  _attributes:
+  - Attribute: 0
+    Value: 50
+  - Attribute: 1
+    Value: 10
+  - Attribute: 2
+    Value: Um cogumelo raro que pode ser encontrado em areas internas.
+  - Attribute: 7
+    Value: 3
+  - Attribute: 11
+    Value: 3
+  _icon:
+    m_AssetGUID: 09c7b18e8b375cc4a9cc08fb3e0b64d7
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
