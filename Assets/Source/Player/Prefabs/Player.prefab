@@ -81,9 +81,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8305832716486723262, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7987876960526740792, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7315639754745340022, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 40ccc9aaa5f8ed54bb3d8b157770d7bf, type: 2}
+    - target: {fileID: -405879499105473100, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
       propertyPath: m_Name
       value: Catharine_pendant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396800452974300487, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551230240574800048, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679002400364313720, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 935e25eca289dd343b07008124bf74c6, type: 2}
+    - target: {fileID: 4679002400364313720, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 40ccc9aaa5f8ed54bb3d8b157770d7bf, type: 2}
+    - target: {fileID: 4953291805546466654, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 352430c84a64703498585e86dd292864, type: 2}
+    - target: {fileID: 5930075912387087964, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502119388464111599, guid: 7e4b1b7831ecace49bb3366d88e522c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -186,6 +230,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6ba006ce394437b40bd99b3025c4c71f, type: 3}
       propertyPath: m_Name
       value: Leonora_player
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6ba006ce394437b40bd99b3025c4c71f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2302264551081553011, guid: 6ba006ce394437b40bd99b3025c4c71f, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'

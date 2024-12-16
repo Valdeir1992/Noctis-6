@@ -7,6 +7,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Catherine_pendant
+    second: {fileID: 2100000, guid: 935e25eca289dd343b07008124bf74c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Equimon_Gem
+    second: {fileID: 2100000, guid: 40ccc9aaa5f8ed54bb3d8b157770d7bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Leonora_pingente_Master_Catherine_pendant
     second: {fileID: 2100000, guid: 935e25eca289dd343b07008124bf74c6, type: 2}
   - first:
@@ -18,6 +28,11 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Leonora_pingente_Master_Nimeryus_gem
+    second: {fileID: 2100000, guid: 352430c84a64703498585e86dd292864, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nimeryus_gem
     second: {fileID: 2100000, guid: 352430c84a64703498585e86dd292864, type: 2}
   materials:
     materialImportMode: 2
