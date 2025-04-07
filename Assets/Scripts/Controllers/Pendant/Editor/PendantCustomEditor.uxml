@@ -1,0 +1,20 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <engine:Foldout text="Equimon" name="Equimon_Foldout">
+        <editor:PropertyField binding-path="EquimonCrystal" label="EquimonCrystal" />
+        <editor:PropertyField binding-path="EquimonCrystalTimeTransition" label="EquimonCrystalTimeTransition" />
+        <engine:Button text="Transition debug" style="margin-top: 10px; margin-bottom: 10px; height: 20px;" />
+    </engine:Foldout>
+    <engine:Foldout text="Nimeryus" name="Nimeryus_Foldout">
+        <editor:PropertyField binding-path="NimeryusCrystals" label="NimeryusCrystals" />
+        <editor:PropertyField binding-path="NimerysCrystalTimeTransition" label="NimerysCrystalTimeTransition" />
+        <engine:VisualElement style="flex-grow: 1; flex-direction: row; flex-wrap: wrap; justify-content: center; margin-top: 30px;">
+            <engine:Button text="Transition debug 1" style="margin-top: 10px; margin-bottom: 10px; height: 20px; width: 30%; font-size: 7px;" />
+            <engine:Button text="Transition debug 2" name="Button" style="margin-top: 10px; margin-bottom: 10px; height: 20px; width: 30%; font-size: 7px;" />
+            <engine:Button text="Transition debug 3" style="margin-top: 10px; margin-bottom: 10px; height: 20px; width: 30%; font-size: 7px;" />
+            <engine:Button text="Transition debug 4" style="margin-top: 10px; margin-bottom: 10px; height: 20px; width: 30%; font-size: 7px;" />
+            <engine:Button text="Transition debug 5" style="margin-top: 10px; margin-bottom: 10px; height: 20px; width: 30%; font-size: 7px;" />
+            <engine:Button text="Transition debug 6" style="margin-top: 10px; margin-bottom: 10px; height: 20px; width: 30%; font-size: 7px;" />
+            <engine:Button text="Transition debug 7" style="margin-top: 10px; margin-bottom: 10px; height: 20px; width: 30%; font-size: 7px;" />
+        </engine:VisualElement>
+    </engine:Foldout>
+</engine:UXML>
