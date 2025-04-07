@@ -5,20 +5,14 @@ using Zenject;
 public class CharacterCameraController : MonoBehaviour
 {
     private int _currentCamera;
-    private Cinemachine.CinemachineFreeLook _thirdPerson;
-    private Cinemachine.CinemachineVirtualCamera _firstPerson;
-    private Transform _target;
+    [Inject(Id = "Camera")] private Cinemachine.CinemachineFreeLook _thirdPerson;
+    [Inject(Id = "Camera")] private Cinemachine.CinemachineVirtualCamera _firstPerson;
+    [Inject(Id = "Leonora")] private Transform _target;
     [Inject] private ScreenWarningController _screenWarningController;
 
-    public void Setup(Transform target)
+    private void Awake()
     {
-        _thirdPerson = GameObject.Find("ThirdPerson").GetComponent<Cinemachine.CinemachineFreeLook>();
-        _firstPerson = GameObject.Find("FirstPerson").GetComponent<Cinemachine.CinemachineVirtualCamera>();
-        _target = target;
-        _thirdPerson.LookAt = _target;
-        _thirdPerson.Follow = _target;
-        _firstPerson.LookAt = _target;
-        _firstPerson.Follow = _target;
+        Setup();
     }
     private void Update()
     {
@@ -48,7 +42,15 @@ public class CharacterCameraController : MonoBehaviour
             }
             ChangeCamera((CameraType)index);
         }
-    } 
+    }
+
+    public void Setup()
+    {
+        _thirdPerson.LookAt = _target;
+        _thirdPerson.Follow = _target;
+        _firstPerson.LookAt = _target;
+        _firstPerson.Follow = _target;
+    }
     public void ChangeCamera(CameraType type)
     {
         _currentCamera = (int)type;

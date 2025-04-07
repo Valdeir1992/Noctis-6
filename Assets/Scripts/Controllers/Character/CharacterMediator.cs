@@ -6,21 +6,17 @@ using Zenject;
 
 public class CharacterMediator : MonoBehaviour
 {
-    private GameInputs _inputs;
-    private Vector2 _currentDirectionInput;
-    private Character _moviment;
     private bool _canMove = true;
     private bool _canRun = true;
-    private CharacterCameraController _cameraController;
+    private GameInputs _inputs;
+    private Vector2 _currentDirectionInput;
+    [Inject] private Character _moviment;  
     [Inject] private GameplayController _gameplayController;
-    [SerializeField] private CharacterSO _data;
-    [SerializeField] private Transform _target;
+    [Inject] private CharacterSO _data;
+    [Inject(Id ="Leonora")] private Transform _target;
 
     private void Awake()
-    {
-        _moviment = GetComponent<Character>();
-        _cameraController = GetComponent<CharacterCameraController>();
-        _cameraController.Setup(_target);
+    {   
         SetupInputs();
         SetupCharacterData();
     }

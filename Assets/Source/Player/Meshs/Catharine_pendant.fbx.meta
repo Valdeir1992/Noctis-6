@@ -52,7 +52,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -110,7 +110,62 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Catharine_pendant(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Nymeruis_gem_3
+      parentName: Catharine_pendant(Clone)
+      position: {x: 0.01495244, y: 1.3848448, z: 0.14601022}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Nymeruis_gem_1
+      parentName: Catharine_pendant(Clone)
+      position: {x: 0.017089428, y: 1.4216778, z: 0.1461695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Nymeruis_gem_2
+      parentName: Catharine_pendant(Clone)
+      position: {x: 0.020536527, y: 1.4038745, z: 0.14626823}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Nymeruis_gem_4
+      parentName: Catharine_pendant(Clone)
+      position: {x: 0.000026717633, y: 1.3723968, z: 0.14613162}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Nymeruis_gem_5
+      parentName: Catharine_pendant(Clone)
+      position: {x: -0.014899004, y: 1.3848448, z: 0.14601022}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Nymeruis_gem_7
+      parentName: Catharine_pendant(Clone)
+      position: {x: -0.017035995, y: 1.4216778, z: 0.1461695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Nymeruis_gem_6
+      parentName: Catharine_pendant(Clone)
+      position: {x: -0.020483093, y: 1.4038745, z: 0.14626823}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Catherine_pedant_Connect
+      parentName: Catharine_pendant(Clone)
+      position: {x: -0.000015811995, y: 1.4485452, z: 0.1431365}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Catherine_current
+      parentName: Catharine_pendant(Clone)
+      position: {x: 0.0010390724, y: 1.4505355, z: 0.14302863}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Catherine_Pendant
+      parentName: Catharine_pendant(Clone)
+      position: {x: 0.000026717185, y: 1.4441304, z: 0.1431464}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
