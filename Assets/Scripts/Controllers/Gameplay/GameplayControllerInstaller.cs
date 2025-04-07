@@ -8,7 +8,7 @@ public class GameplayControllerInstaller : MonoInstaller
     [SerializeField] private ScreenWarningController _screenWarningControllerPrefab;
     public override void InstallBindings()
     {
-        Container.Bind<PlayerSpawnController>().FromComponentInNewPrefab(_playerSpawnPrefab).AsCached();
+        Container.Bind<PlayerSpawnController>().FromComponentInNewPrefab(_playerSpawnPrefab).AsSingle();
         Container.BindFactory<CharacterMediator, CharacterMediator.Factory>().FromComponentInNewPrefab(_playerPref).AsSingle();
         Container.Bind<GameplayController>().FromComponentInHierarchy().AsCached();
         Container.Bind<ScreenWarningController>().FromComponentInNewPrefab(_screenWarningControllerPrefab).AsCached();
